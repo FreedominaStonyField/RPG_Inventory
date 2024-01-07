@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_ytejj")
-name = "Key"
+item_name = &"my key"
 item_catagory = "Indispensable"

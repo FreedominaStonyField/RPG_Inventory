@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_yayqb")
-name = "Battle Geaar"
+item_name = &"Hypno Watch"
 item_catagory = "Equipment"

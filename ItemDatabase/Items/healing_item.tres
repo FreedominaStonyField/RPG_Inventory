@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_g0jrp")
-name = "basic heal spray"
+item_name = &"Vibe Wand"
 item_catagory = "Healing"
