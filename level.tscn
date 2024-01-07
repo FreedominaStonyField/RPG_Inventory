@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=3 uid="uid://c2vpknecl4bdb"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_s5fta"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jjp3x"]
+sky_top_color = Color(0.0392157, 0.454902, 0.792157, 1)
+sky_horizon_color = Color(0.528431, 0.628431, 0.718627, 1)
+ground_bottom_color = Color(0.0745098, 0.0588235, 0.0823529, 1)
+ground_horizon_color = Color(0.528431, 0.628431, 0.718627, 1)
+
+[sub_resource type="Sky" id="Sky_bdlhk"]
+sky_material = SubResource("ProceduralSkyMaterial_jjp3x")
+
+[sub_resource type="Environment" id="Environment_6pf3q"]
+background_mode = 2
+sky = SubResource("Sky_bdlhk")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7mapp"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_6wje7"]
+
+[node name="Level" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_6pf3q")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.732543, 0.276874, -0.621869, 0, 0.913545, 0.406737, 0.680721, 0.297952, -0.669211, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Floor" type="CSGBox3D" parent="."]
+use_collision = true
+size = Vector3(20, 1, 40)
+
+[node name="Walls" type="CSGBox3D" parent="."]
+use_collision = true
+size = Vector3(22, 7, 42)
+
+[node name="Cutout" type="CSGBox3D" parent="Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+operation = 2
+use_collision = true
+size = Vector3(20, 6, 40)
+
+[node name="Player" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.93048, 0)
+script = ExtResource("1_s5fta")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+shape = SubResource("CapsuleShape3D_7mapp")
+
+[node name="Camera3D" type="Camera3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 2.42, 3.93)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
+mesh = SubResource("CapsuleMesh_6wje7")
