@@ -4,6 +4,7 @@ extends Node
 var items : Array
 func _ready():
 	load_items_into_array()
+	print("the following items have been loaded into the database:" )
 	for i in items:
 		print(i.item_name)
 

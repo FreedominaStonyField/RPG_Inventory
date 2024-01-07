@@ -1,5 +1,8 @@
 extends Control
 
+@export var player_inventory:Inventory
+
+
 func _ready():
 	hide()
 
