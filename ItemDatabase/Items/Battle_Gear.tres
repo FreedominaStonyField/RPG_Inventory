@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="game_item" load_steps=2 format=3 uid="uid://33ne3sugdi2e"]
+
+[ext_resource type="Script" path="res://ItemDatabase/game_item_class.gd" id="1_yayqb"]
+
+[resource]
+script = ExtResource("1_yayqb")
+name = "Battle Geaar"
+item_catagory = "Equipment"

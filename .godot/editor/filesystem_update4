@@ -1,2 +1,7 @@
 res://level.tscn
 res://Player.gd
+res://UI.gd
+res://ItemDatabase/game_item_class.gd
+res://ItemDatabase/Items/healing_item.tres
+res://ItemDatabase/Items/lab_key.tres
+res://ItemDatabase/Items/Battle_Gear.tres

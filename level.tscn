@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://c2vpknecl4bdb"]
+[gd_scene load_steps=8 format=3 uid="uid://c2vpknecl4bdb"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_s5fta"]
+[ext_resource type="Script" path="res://UI.gd" id="2_qhqhh"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jjp3x"]
 sky_top_color = Color(0.0392157, 0.454902, 0.792157, 1)
@@ -56,3 +57,29 @@ transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 2.42, 3
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
 mesh = SubResource("CapsuleMesh_6wje7")
+
+[node name="InventoryUI" type="Control" parent="Player"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_qhqhh")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Player/InventoryUI"]
+layout_mode = 0
+offset_left = 197.0
+offset_top = 93.0
+offset_right = 888.0
+offset_bottom = 500.0
+
+[node name="ItemList" type="VBoxContainer" parent="Player/InventoryUI/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="Label" type="Label" parent="Player/InventoryUI/ScrollContainer/ItemList"]
+layout_mode = 2
+text = "Item*Amount"
+horizontal_alignment = 1
