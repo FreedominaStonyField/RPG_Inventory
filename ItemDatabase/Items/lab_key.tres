@@ -4,5 +4,7 @@
 
 [resource]
 script = ExtResource("1_ytejj")
+stackable = true
+max_stack_size = 999
 item_name = &"my key"
 item_catagory = "Indispensable"

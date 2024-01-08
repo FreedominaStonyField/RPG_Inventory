@@ -4,5 +4,7 @@
 
 [resource]
 script = ExtResource("1_yayqb")
+stackable = true
+max_stack_size = 999
 item_name = &"Hypno Watch"
 item_catagory = "Equipment"

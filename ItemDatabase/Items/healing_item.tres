@@ -4,5 +4,7 @@
 
 [resource]
 script = ExtResource("1_g0jrp")
+stackable = true
+max_stack_size = 999
 item_name = &"Vibe Wand"
 item_catagory = "Healing"

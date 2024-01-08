@@ -1,9 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://c2vpknecl4bdb"]
+[gd_scene load_steps=8 format=3 uid="uid://c2vpknecl4bdb"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_s5fta"]
 [ext_resource type="Script" path="res://UI.gd" id="2_qhqhh"]
-[ext_resource type="Resource" uid="uid://33ne3sugdi2e" path="res://ItemDatabase/Items/Battle_Gear.tres" id="3_b1lqk"]
-[ext_resource type="Script" path="res://Inventory_Resource.gd" id="4_sjook"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jjp3x"]
 sky_top_color = Color(0.0392157, 0.454902, 0.792157, 1)
@@ -23,10 +21,6 @@ glow_enabled = true
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7mapp"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_6wje7"]
-
-[sub_resource type="Resource" id="Resource_r58ek"]
-script = ExtResource("4_sjook")
-_items = [[ExtResource("3_b1lqk"), 3]]
 
 [node name="Level" type="Node3D"]
 
@@ -71,7 +65,6 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_qhqhh")
-player_inventory = SubResource("Resource_r58ek")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Player/InventoryUI"]
 layout_mode = 0
