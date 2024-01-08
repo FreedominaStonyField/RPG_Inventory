@@ -1,8 +1,2 @@
 res://level.tscn
-res://ItemDatabase/item_database.gd
-res://ItemDatabase/game_item_class.gd
-res://ItemDatabase/Items/Battle_Gear.tres
-res://ItemDatabase/Items/healing_item.tres
-res://ItemDatabase/Items/lab_key.tres
-res://Inventory_Resource.gd
 res://UI.gd
