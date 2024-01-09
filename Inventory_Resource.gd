@@ -49,3 +49,15 @@ func add_item(item_name, amount_to_add):
 		_items.append(new_item)
 		amount_left_to_add -= new_item.quantity
 	inventory_changed.emit(self)
+
+
+func remove_item(item_name):
+	for i in _items:
+		#print(i)
+		print(i.item_reference.item_name)
+		if i.item_reference.item_name == item_name:
+			print(i.item_reference.item_name)
+			i.quantity -= 1
+			if i.quantity < 1:
+				_items.erase(i)
+	inventory_changed.emit(self)

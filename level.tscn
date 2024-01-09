@@ -68,18 +68,49 @@ script = ExtResource("2_qhqhh")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Player/InventoryUI"]
 layout_mode = 0
-offset_left = 197.0
-offset_top = 93.0
-offset_right = 888.0
-offset_bottom = 500.0
+offset_left = 830.0
+offset_top = 42.0
+offset_right = 992.0
+offset_bottom = 449.0
 
-[node name="ItemList" type="VBoxContainer" parent="Player/InventoryUI/ScrollContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="Player/InventoryUI/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 3
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="ItemList" type="VBoxContainer" parent="Player/InventoryUI/ScrollContainer/MarginContainer"]
+layout_mode = 2
 alignment = 1
 
-[node name="Label" type="Label" parent="Player/InventoryUI/ScrollContainer/ItemList"]
+[node name="Label" type="Label" parent="Player/InventoryUI/ScrollContainer/MarginContainer/ItemList"]
 layout_mode = 2
 text = "Item*Amount"
 horizontal_alignment = 1
+
+[node name="ActionSelectionMenu" type="GridContainer" parent="Player/InventoryUI"]
+layout_mode = 0
+offset_left = 857.0
+offset_top = 498.0
+offset_right = 964.0
+offset_bottom = 564.0
+columns = 2
+
+[node name="Button" type="Button" parent="Player/InventoryUI/ActionSelectionMenu"]
+layout_mode = 2
+text = "Use
+"
+
+[node name="Button2" type="Button" parent="Player/InventoryUI/ActionSelectionMenu"]
+layout_mode = 2
+text = "Give"
+
+[node name="Button3" type="Button" parent="Player/InventoryUI/ActionSelectionMenu"]
+layout_mode = 2
+text = "Toss"
+
+[node name="Button4" type="Button" parent="Player/InventoryUI/ActionSelectionMenu"]
+layout_mode = 2
+text = "Cancel"
