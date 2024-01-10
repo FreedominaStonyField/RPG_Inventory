@@ -7,6 +7,7 @@ const JUMP_VELOCITY = 4.5
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
+@onready var pickup_shapecast:ShapeCast3D = $PickupD
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -22,6 +23,9 @@ func _physics_process(delta):
 	var input_dir = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
+		pickup_shapecast.target_position.x = direction.x * 2
+		pickup_shapecast.target_position.z = direction.z * 2
+		pickup_shapecast.target_position
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
 	else:

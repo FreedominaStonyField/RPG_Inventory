@@ -1,3 +1,4 @@
 res://level.tscn
-res://UI.gd
 res://Inventory_Resource.gd
+res://UI.gd
+res://Player.gd

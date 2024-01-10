@@ -51,13 +51,17 @@ func add_item(item_name, amount_to_add):
 	inventory_changed.emit(self)
 
 
-func remove_item(item_name):
+func remove_item(item_name, items_to_remove= 1):
 	for i in _items:
+		if items_to_remove > 1:
+			push_warning("cant remove a  amount less then 1")
 		#print(i)
+		
 		print(i.item_reference.item_name)
 		if i.item_reference.item_name == item_name:
 			print(i.item_reference.item_name)
-			i.quantity -= 1
+			i.quantity -= items_to_remove
 			if i.quantity < 1:
 				_items.erase(i)
+			return
 	inventory_changed.emit(self)

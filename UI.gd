@@ -19,8 +19,9 @@ func _input(event):
 		player_inventory.add_item("Vibe Wand", 1)
 
 	elif event.is_action_pressed("ui_cancel"):
-
-		player_inventory.remove_item("Vibe Wand")
+		player_inventory.remove_item("Hypno Watch")
+		
+		player_inventory.remove_item("Vibe Wand", 20)
 		player_inventory.remove_item("VibeWand")
 func update_ui(inventory):
 	
