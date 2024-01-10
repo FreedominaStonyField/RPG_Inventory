@@ -1,3 +1,6 @@
+StaticBody3D
+AnimationPlayer
+Sprite3D
 CollisionShape3D
 ShapeCast3D
 MarginContainer
@@ -10,5 +13,3 @@ Control
 MeshInstance3D
 Camera3D
 CharacterBody3D
-WorldEnvironment
-CSGBox3D
