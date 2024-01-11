@@ -1,7 +1,6 @@
-[gd_scene load_steps=21 format=3 uid="uid://c2vpknecl4bdb"]
+[gd_scene load_steps=20 format=3 uid="uid://c2vpknecl4bdb"]
 
 [ext_resource type="PackedScene" uid="uid://dgil1atc6avid" path="res://player_spawner/player_spawner.tscn" id="1_kywgj"]
-[ext_resource type="PackedScene" uid="uid://cedc7r2smh7l2" path="res://player/player.tscn" id="2_a6cjx"]
 [ext_resource type="PackedScene" uid="uid://dtkr45pl0g6ir" path="res://starter_town/player_house/playerhouse.gltf" id="4_d32j5"]
 [ext_resource type="PackedScene" uid="uid://b54y1egkcb4t7" path="res://starter_town/rival_house/rival_house.gltf" id="4_gtk1o"]
 
@@ -62,7 +61,6 @@ data = PackedVector3Array(0.3454, -0.3294, -0.75, 0.3454, -0.1419, 0.75, 0.3454,
 [node name="Level" type="Node3D"]
 
 [node name="PlayerSpawner" parent="." instance=ExtResource("1_kywgj")]
-player_scene = ExtResource("2_a6cjx")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_6pf3q")
