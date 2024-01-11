@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cedc7r2smh7l2"]
+[gd_scene load_steps=28 format=3 uid="uid://cedc7r2smh7l2"]
 
 [ext_resource type="Script" path="res://player/Player.gd" id="1_pia3j"]
 [ext_resource type="Texture2D" uid="uid://du84ahddndkjd" path="res://bace_dummy.png" id="2_7vq3v"]
@@ -48,6 +48,8 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_b5pq8"]
 resource_name = "idle down"
+length = 0.001
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -87,6 +89,8 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_fcbxl"]
 resource_name = "idle left"
+length = 0.001
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -126,6 +130,8 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_p8bs4"]
 resource_name = "idle right"
+length = 0.001
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -165,6 +171,8 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_1lf1f"]
 resource_name = "idle up"
+length = 0.001
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -379,37 +387,68 @@ _data = {
 "walk_up": SubResource("Animation_c2fki")
 }
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_gcicr"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_l2fj3"]
+animation = &"idle left"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_usi1k"]
+animation = &"idle up"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5icf7"]
+animation = &"idle down"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_bolgh"]
+animation = &"idle right"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_mdvvj"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_l2fj3")
+blend_point_0/pos = Vector2(-1, 0)
+blend_point_1/node = SubResource("AnimationNodeAnimation_usi1k")
+blend_point_1/pos = Vector2(0, -1)
+blend_point_2/node = SubResource("AnimationNodeAnimation_5icf7")
+blend_point_2/pos = Vector2(0, 1)
+blend_point_3/node = SubResource("AnimationNodeAnimation_bolgh")
+blend_point_3/pos = Vector2(1, 0)
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_o0dy4"]
 animation = &"walk_left"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2tmr3"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3hho3"]
 animation = &"walk_right"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_dyoe2"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_d2pwg"]
 animation = &"walk_up"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2gdm8"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_65dgp"]
 animation = &"walk_down"
 
-[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_27gqj"]
-auto_triangles = false
-blend_point_0/node = SubResource("AnimationNodeAnimation_gcicr")
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_b05r4"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_o0dy4")
 blend_point_0/pos = Vector2(-1, 0)
-blend_point_1/node = SubResource("AnimationNodeAnimation_2tmr3")
+blend_point_1/node = SubResource("AnimationNodeAnimation_3hho3")
 blend_point_1/pos = Vector2(1, 0)
-blend_point_2/node = SubResource("AnimationNodeAnimation_dyoe2")
-blend_point_2/pos = Vector2(0, 1)
-blend_point_3/node = SubResource("AnimationNodeAnimation_2gdm8")
-blend_point_3/pos = Vector2(0, -1)
-triangles = PackedInt32Array(0, 1, 2, 0, 1, 3)
-blend_mode = 1
+blend_point_2/node = SubResource("AnimationNodeAnimation_d2pwg")
+blend_point_2/pos = Vector2(0, -1)
+blend_point_3/node = SubResource("AnimationNodeAnimation_65dgp")
+blend_point_3/pos = Vector2(0, 1)
 
-[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_nhjt0"]
-graph_offset = Vector2(-149.033, 32.4934)
-nodes/Walking/node = SubResource("AnimationNodeBlendSpace2D_27gqj")
-nodes/Walking/position = Vector2(320, 80)
-nodes/output/position = Vector2(680, 60)
-node_connections = [&"output", 0, &"Walking"]
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_0m3ay"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_q8u1r"]
+advance_mode = 2
+advance_condition = &"is_moving"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_iv358"]
+advance_mode = 2
+advance_condition = &"is_idle"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_by4ff"]
+states/Idle_BlendSpace2D/node = SubResource("AnimationNodeBlendSpace2D_mdvvj")
+states/Idle_BlendSpace2D/position = Vector2(494, 131)
+states/Start/position = Vector2(177, 106)
+states/Walking_BlendSpace2D/node = SubResource("AnimationNodeBlendSpace2D_b05r4")
+states/Walking_BlendSpace2D/position = Vector2(494, 34)
+transitions = ["Start", "Idle_BlendSpace2D", SubResource("AnimationNodeStateMachineTransition_0m3ay"), "Idle_BlendSpace2D", "Walking_BlendSpace2D", SubResource("AnimationNodeStateMachineTransition_q8u1r"), "Walking_BlendSpace2D", "Idle_BlendSpace2D", SubResource("AnimationNodeStateMachineTransition_iv358")]
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_pia3j")
@@ -436,9 +475,12 @@ vframes = 2
 libraries = {
 "": SubResource("AnimationLibrary_s7872")
 }
-tree_root = SubResource("AnimationNodeBlendTree_nhjt0")
+tree_root = SubResource("AnimationNodeStateMachine_by4ff")
 anim_player = NodePath("../AnimationPlayer")
-parameters/Walking/blend_position = Vector2(-0.00594062, -0.00440526)
+parameters/conditions/is_idle = false
+parameters/conditions/is_moving = false
+parameters/Idle_BlendSpace2D/blend_position = Vector2(-0.0633664, -0.275766)
+parameters/Walking_BlendSpace2D/blend_position = Vector2(-0.00198019, 0.732087)
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-1, 6.18172e-08, -6.18172e-08, 0, 0.707107, 0.707107, 8.74228e-08, 0.707107, -0.707107, 0, 20, -20)
