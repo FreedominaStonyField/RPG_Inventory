@@ -2,3 +2,4 @@ res://player/player.tscn
 res://player/Player.gd
 res://level.tscn
 res://player/new_animation_node_state_machine_playback.tres
+res://pause_menu/pausemenu.gd

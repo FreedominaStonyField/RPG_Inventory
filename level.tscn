@@ -68,7 +68,7 @@ player_scene = ExtResource("2_a6cjx")
 environment = SubResource("Environment_6pf3q")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.656845, -0.156174, -0.737675, -0.324305, 0.941719, 0.0893977, 0.680721, 0.297952, -0.669211, 0, 0, 0)
+transform = Transform3D(-0.656845, -0.156174, -0.737675, -0.167313, -0.92374, 0.344545, -0.735229, 0.349735, 0.580624, 0, 0, 0)
 shadow_enabled = true
 
 [node name="Floor" type="CSGBox3D" parent="."]

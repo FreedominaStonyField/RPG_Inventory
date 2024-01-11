@@ -1,3 +1,8 @@
+Button
+VBoxContainer
+MarginContainer
+PanelContainer
+Control
 AnimationTree
 Camera3D
 Sprite3D
@@ -8,7 +13,3 @@ CharacterBody3D
 Marker3D
 StaticBody3D
 ShapeCast3D
-MarginContainer
-Button
-GridContainer
-Label
