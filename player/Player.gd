@@ -1,5 +1,6 @@
 extends CharacterBody3D
 
+var inventory : Inventory = Inventory.new()
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
@@ -10,6 +11,7 @@ var direction:Vector3 = Vector3.ZERO
 @onready var animation_tree :AnimationTree = $Visuals/AnimationTree
 
 
+@warning_ignore("unused_parameter")
 func _process(delta):
 	update_animation_peramiters()
 
