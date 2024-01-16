@@ -1,8 +1,9 @@
-[gd_scene load_steps=29 format=3 uid="uid://cedc7r2smh7l2"]
+[gd_scene load_steps=31 format=3 uid="uid://cedc7r2smh7l2"]
 
 [ext_resource type="Script" path="res://player/Player.gd" id="1_pia3j"]
 [ext_resource type="Texture2D" uid="uid://du84ahddndkjd" path="res://bace_dummy.png" id="2_7vq3v"]
 [ext_resource type="Script" path="res://pause_menu/pausemenu.gd" id="3_jekwk"]
+[ext_resource type="Script" path="res://player/testing_detection.gd" id="4_mw0tn"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kku5h"]
 radius = 0.404439
@@ -45,6 +46,18 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Area3D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_b5pq8"]
@@ -251,6 +264,18 @@ tracks/2/keys = {
 "update": 1,
 "values": [0, 1]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Area3D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0.5)]
+}
 
 [sub_resource type="Animation" id="Animation_ybdip"]
 resource_name = "walk_left"
@@ -291,6 +316,18 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [2, 3, 4]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Area3D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.5, 0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_q0amr"]
@@ -333,6 +370,18 @@ tracks/2/keys = {
 "update": 1,
 "values": [2, 3, 4]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Area3D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.5, 0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_c2fki"]
 resource_name = "walk_up"
@@ -374,6 +423,18 @@ tracks/2/keys = {
 "update": 1,
 "values": [5, 6]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Area3D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, -0.5)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_s7872"]
 _data = {
@@ -409,6 +470,7 @@ blend_point_2/node = SubResource("AnimationNodeAnimation_5icf7")
 blend_point_2/pos = Vector2(0, 1)
 blend_point_3/node = SubResource("AnimationNodeAnimation_bolgh")
 blend_point_3/pos = Vector2(1, 0)
+blend_mode = 1
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_o0dy4"]
 animation = &"walk_left"
@@ -431,6 +493,7 @@ blend_point_2/node = SubResource("AnimationNodeAnimation_d2pwg")
 blend_point_2/pos = Vector2(0, -1)
 blend_point_3/node = SubResource("AnimationNodeAnimation_65dgp")
 blend_point_3/pos = Vector2(0, 1)
+blend_mode = 1
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_0m3ay"]
 advance_mode = 2
@@ -450,6 +513,9 @@ states/Start/position = Vector2(177, 106)
 states/Walking_BlendSpace2D/node = SubResource("AnimationNodeBlendSpace2D_b05r4")
 states/Walking_BlendSpace2D/position = Vector2(494, 34)
 transitions = ["Start", "Idle_BlendSpace2D", SubResource("AnimationNodeStateMachineTransition_0m3ay"), "Idle_BlendSpace2D", "Walking_BlendSpace2D", SubResource("AnimationNodeStateMachineTransition_q8u1r"), "Walking_BlendSpace2D", "Idle_BlendSpace2D", SubResource("AnimationNodeStateMachineTransition_iv358")]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m7rlj"]
+size = Vector3(0.9, 0.5, 0.9)
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_pia3j")
@@ -481,7 +547,7 @@ tree_root = SubResource("AnimationNodeStateMachine_by4ff")
 anim_player = NodePath("../AnimationPlayer")
 parameters/conditions/is_idle = false
 parameters/conditions/is_moving = false
-parameters/Idle_BlendSpace2D/blend_position = Vector2(-0.0633664, -0.275766)
+parameters/Idle_BlendSpace2D/blend_position = Vector2(-0.0947955, -0.460317)
 parameters/Walking_BlendSpace2D/blend_position = Vector2(-0.00198019, 0.732087)
 
 [node name="Camera3D" type="Camera3D" parent="."]
@@ -536,4 +602,19 @@ text = "Save"
 layout_mode = 2
 text = "Close"
 
+[node name="VBoxContainer" type="VBoxContainer" parent="UI"]
+layout_mode = 0
+offset_left = -1055.0
+offset_top = 140.0
+offset_right = -911.0
+offset_bottom = 328.0
+script = ExtResource("4_mw0tn")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_m7rlj")
+
 [connection signal="pressed" from="UI/PauseMenu/MarginContainer/VBoxContainer/CloseButton" to="UI/PauseMenu" method="_on_close_button_pressed"]
+[connection signal="body_entered" from="Area3D" to="UI/VBoxContainer" method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="UI/VBoxContainer" method="_on_area_3d_body_exited"]

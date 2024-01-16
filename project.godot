@@ -23,10 +23,15 @@ Dialogic="*res://addons/dialogic/Other/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
-"character": "res://character.dch"
+"Player": "res://player/Player.dch",
+"character": "res://character.dch",
+"professor": "res://professor.dch",
+"shopkeeper": "res://shopkeeper.dch"
 }
-directories/dtl_directory={}
-layout/style_list=["res://Style.tres"]
+directories/dtl_directory={
+"welcome_game_start": "res://welcome_game_start.dtl"
+}
+layout/style_list=["res://Style.tres", "res://VN_style.tres"]
 layout/default_style="res://Style.tres"
 glossary/default_case_sensitive=true
 text/letter_speed=0.01
