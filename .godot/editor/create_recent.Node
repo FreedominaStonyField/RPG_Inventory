@@ -1,5 +1,5 @@
-Label
 CollisionShape3D
+Label
 Area3D
 VBoxContainer
 Button
@@ -12,4 +12,3 @@ Sprite3D
 AnimationPlayer
 Node3D
 CharacterBody3D
-Marker3D

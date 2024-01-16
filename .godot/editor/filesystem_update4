@@ -14,3 +14,5 @@ res://interaction_area/interaction_area.tscn
 res://interaction_area/interaction_area.gd
 res://interaction_area/Interaction_Manager.tscn
 res://interaction_area/Interaction_Manager.gd
+res://starter_town/rival_house/rival_house.gd
+res://starter_town/rival_house/rival_house.tscn
