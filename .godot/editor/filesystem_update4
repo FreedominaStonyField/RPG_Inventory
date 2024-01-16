@@ -10,3 +10,7 @@ res://welcome_game_start.dtl
 res://VN_style.tres
 res://professor.dch
 res://player/testing_detection.gd
+res://interaction_area/interaction_area.tscn
+res://interaction_area/interaction_area.gd
+res://interaction_area/Interaction_Manager.tscn
+res://interaction_area/Interaction_Manager.gd

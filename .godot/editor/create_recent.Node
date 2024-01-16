@@ -1,6 +1,7 @@
-VBoxContainer
+Label
 CollisionShape3D
 Area3D
+VBoxContainer
 Button
 MarginContainer
 PanelContainer

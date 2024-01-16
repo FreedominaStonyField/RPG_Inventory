@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://cedc7r2smh7l2"]
+[gd_scene load_steps=30 format=3 uid="uid://cedc7r2smh7l2"]
 
 [ext_resource type="Script" path="res://player/Player.gd" id="1_pia3j"]
 [ext_resource type="Texture2D" uid="uid://du84ahddndkjd" path="res://bace_dummy.png" id="2_7vq3v"]
@@ -46,18 +46,6 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("../Area3D:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_b5pq8"]
@@ -264,18 +252,6 @@ tracks/2/keys = {
 "update": 1,
 "values": [0, 1]
 }
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("../Area3D:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0.5)]
-}
 
 [sub_resource type="Animation" id="Animation_ybdip"]
 resource_name = "walk_left"
@@ -316,18 +292,6 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [2, 3, 4]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("../Area3D:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0.5, 0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_q0amr"]
@@ -370,18 +334,6 @@ tracks/2/keys = {
 "update": 1,
 "values": [2, 3, 4]
 }
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("../Area3D:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-0.5, 0, 0)]
-}
 
 [sub_resource type="Animation" id="Animation_c2fki"]
 resource_name = "walk_up"
@@ -422,18 +374,6 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [5, 6]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("../Area3D:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, -0.5)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_s7872"]
@@ -514,10 +454,8 @@ states/Walking_BlendSpace2D/node = SubResource("AnimationNodeBlendSpace2D_b05r4"
 states/Walking_BlendSpace2D/position = Vector2(494, 34)
 transitions = ["Start", "Idle_BlendSpace2D", SubResource("AnimationNodeStateMachineTransition_0m3ay"), "Idle_BlendSpace2D", "Walking_BlendSpace2D", SubResource("AnimationNodeStateMachineTransition_q8u1r"), "Walking_BlendSpace2D", "Idle_BlendSpace2D", SubResource("AnimationNodeStateMachineTransition_iv358")]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_m7rlj"]
-size = Vector3(0.9, 0.5, 0.9)
-
-[node name="Player" type="CharacterBody3D"]
+[node name="Player" type="CharacterBody3D" groups=["player"]]
+collision_layer = 2
 script = ExtResource("1_pia3j")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -610,11 +548,4 @@ offset_right = -911.0
 offset_bottom = 328.0
 script = ExtResource("4_mw0tn")
 
-[node name="Area3D" type="Area3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-shape = SubResource("BoxShape3D_m7rlj")
-
 [connection signal="pressed" from="UI/PauseMenu/MarginContainer/VBoxContainer/CloseButton" to="UI/PauseMenu" method="_on_close_button_pressed"]
-[connection signal="body_entered" from="Area3D" to="UI/VBoxContainer" method="_on_area_3d_body_entered"]
-[connection signal="body_exited" from="Area3D" to="UI/VBoxContainer" method="_on_area_3d_body_exited"]
