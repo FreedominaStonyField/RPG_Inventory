@@ -4,5 +4,8 @@ extends Marker3D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#Dialogic.start("welcome_game_start")
-	add_child(player_scene.instantiate())
+	var player = player_scene.instantiate()
+	player.add_to_group("player")
+	add_child(player)
+	
 	#hide()
