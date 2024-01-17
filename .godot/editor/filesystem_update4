@@ -1,9 +1,10 @@
-res://player/Player.gd
-res://pause_menu/pausemenu.gd
-res://player/player.tscn
+res://level.tscn
 res://Style.tres
 res://VN_style.tres
-res://level.tscn
+res://player/random_item.gd
+res://player/player.tscn
 res://interaction_area/interaction_area.tscn
 res://interaction_area/Interaction_Manager.tscn
 res://starter_town/rival_house/rival_house.tscn
+res://player/random_item.tscn
+res://player/InventoryPanel.gd

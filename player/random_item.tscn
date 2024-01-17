@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://dnjq08awuafjg"]
+
+[ext_resource type="Script" path="res://player/random_item.gd" id="1_t2rdi"]
+[ext_resource type="PackedScene" uid="uid://c3fhpbrckpid" path="res://interaction_area/interaction_area.tscn" id="1_x5c0y"]
+[ext_resource type="Texture2D" uid="uid://isi0qy2etw8j" path="res://icon.svg" id="2_sqrkx"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_gioda"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_1at1y"]
+radius = 0.25
+
+[node name="Random_Item" type="RigidBody3D"]
+collision_layer = 4
+collision_mask = 5
+script = ExtResource("1_t2rdi")
+
+[node name="InteractionArea" parent="." instance=ExtResource("1_x5c0y")]
+collision_layer = 2
+action_name = "Pickup Item"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionArea"]
+shape = SubResource("SphereShape3D_gioda")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+pixel_size = 0.005
+billboard = 1
+shaded = true
+texture = ExtResource("2_sqrkx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0125427, -0.0418149, 0.00396729)
+shape = SubResource("SphereShape3D_1at1y")

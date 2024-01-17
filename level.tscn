@@ -1,9 +1,10 @@
-[gd_scene load_steps=17 format=3 uid="uid://c2vpknecl4bdb"]
+[gd_scene load_steps=18 format=3 uid="uid://c2vpknecl4bdb"]
 
 [ext_resource type="PackedScene" uid="uid://dgil1atc6avid" path="res://player_spawner/player_spawner.tscn" id="1_kywgj"]
 [ext_resource type="PackedScene" uid="uid://cedc7r2smh7l2" path="res://player/player.tscn" id="2_a6cjx"]
 [ext_resource type="PackedScene" uid="uid://c5k72wyps11wh" path="res://starter_town/rival_house/rival_house.tscn" id="3_8cs56"]
 [ext_resource type="PackedScene" uid="uid://dtkr45pl0g6ir" path="res://starter_town/player_house/playerhouse.gltf" id="4_d32j5"]
+[ext_resource type="PackedScene" uid="uid://dnjq08awuafjg" path="res://player/random_item.tscn" id="5_j8tdl"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jjp3x"]
 sky_top_color = Color(0.690196, 0.317647, 0.278431, 1)
@@ -129,5 +130,19 @@ shape = SubResource("ConcavePolygonShape3D_eh2tv")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="blockbench_export/Node/basichouse/house/stairsSide/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_758u1")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+
+[node name="Random_Item" parent="." instance=ExtResource("5_j8tdl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.97569, 0)
+
+[node name="Random_Item2" parent="." instance=ExtResource("5_j8tdl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.70891, 0)
+
+[node name="Random_Item3" parent="." instance=ExtResource("5_j8tdl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.10372, 0)
+
+[node name="Random_Item4" parent="." instance=ExtResource("5_j8tdl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.1977, 0)
 
 [editable path="blockbench_export"]

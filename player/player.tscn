@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://du84ahddndkjd" path="res://bace_dummy.png" id="2_7vq3v"]
 [ext_resource type="Script" path="res://pause_menu/pausemenu.gd" id="3_jekwk"]
 [ext_resource type="ButtonGroup" uid="uid://sim2sxwk8xoq" path="res://pause_menu.tres" id="4_7msxw"]
-[ext_resource type="Script" path="res://player/testing_detection.gd" id="4_mw0tn"]
+[ext_resource type="Script" path="res://player/InventoryPanel.gd" id="5_ftu2u"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kku5h"]
 radius = 0.404439
@@ -456,7 +456,6 @@ states/Walking_BlendSpace2D/position = Vector2(494, 34)
 transitions = ["Start", "Idle_BlendSpace2D", SubResource("AnimationNodeStateMachineTransition_0m3ay"), "Idle_BlendSpace2D", "Walking_BlendSpace2D", SubResource("AnimationNodeStateMachineTransition_q8u1r"), "Walking_BlendSpace2D", "Idle_BlendSpace2D", SubResource("AnimationNodeStateMachineTransition_iv358")]
 
 [node name="Player" type="CharacterBody3D" groups=["player"]]
-collision_layer = 2
 script = ExtResource("1_pia3j")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -497,11 +496,10 @@ size = 4.0
 [node name="UI" type="Control" parent="."]
 process_mode = 3
 layout_mode = 3
-anchors_preset = 11
-anchor_left = 1.0
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-grow_horizontal = 0
+grow_horizontal = 2
 grow_vertical = 2
 
 [node name="PauseMenu" type="PanelContainer" parent="UI"]
@@ -543,16 +541,38 @@ text = "Save"
 
 [node name="CloseButton" type="Button" parent="UI/PauseMenu/MarginContainer/VBoxContainer"]
 layout_mode = 2
-toggle_mode = true
-button_group = ExtResource("4_7msxw")
 text = "Close"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="UI"]
-layout_mode = 0
-offset_left = -1055.0
-offset_top = 140.0
-offset_right = -911.0
-offset_bottom = 328.0
-script = ExtResource("4_mw0tn")
+[node name="InventoryPanel" type="PanelContainer" parent="UI"]
+visible = false
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -360.0
+offset_top = -94.0
+offset_right = -204.0
+offset_bottom = 11.0
+grow_horizontal = 0
+grow_vertical = 2
+script = ExtResource("5_ftu2u")
 
+[node name="MarginContainer" type="MarginContainer" parent="UI/InventoryPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/InventoryPanel/MarginContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="UI/InventoryPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "ItemName   X###f"
+
+[connection signal="toggled" from="UI/PauseMenu/MarginContainer/VBoxContainer/InventoryButton" to="UI/InventoryPanel" method="_on_inventory_button_toggled"]
+[connection signal="pressed" from="UI/PauseMenu/MarginContainer/VBoxContainer/CloseButton" to="UI/PauseMenu" method="_on_close_button_pressed"]
 [connection signal="toggled" from="UI/PauseMenu/MarginContainer/VBoxContainer/CloseButton" to="UI/PauseMenu" method="_on_close_button_toggled"]

@@ -61,6 +61,3 @@ func update_animation_peramiters():
 		
 	
 
-
-func _on_close_button_toggled(toggled_on):
-	pass # Replace with function body.
