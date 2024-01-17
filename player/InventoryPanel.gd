@@ -10,6 +10,8 @@ func _on_inventory_button_toggled(toggled_on):
 		for i in $MarginContainer/VBoxContainer.get_children():
 			i.queue_free()
 		for i in player_inventory._get_items():
+			var button = Button.new()
+			button.text = i.item_reference.item_name + "   " + i.quantity
 			$MarginContainer/VBoxContainer.add_child(Button.new())
 	else:
 		hide()

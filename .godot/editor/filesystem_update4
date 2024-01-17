@@ -8,3 +8,4 @@ res://interaction_area/Interaction_Manager.tscn
 res://starter_town/rival_house/rival_house.tscn
 res://player/random_item.tscn
 res://player/InventoryPanel.gd
+res://interaction_area/Interaction_Manager.gd
