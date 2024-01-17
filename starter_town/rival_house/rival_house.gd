@@ -13,9 +13,10 @@ func _ready():
 func _on_interact():
 	Dialogic.timeline_ended.connect(_on_timeline_ended)
 	Dialogic.start("welcome_game_start")
-	
+	#InteractionManager.player.pause = true
 	await _on_timeline_ended()
 	pass
 
 func _on_timeline_ended():
 	Dialogic.timeline_ended.disconnect(_on_timeline_ended)
+	#InteractionManager.player.pause = false

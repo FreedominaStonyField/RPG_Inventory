@@ -60,3 +60,7 @@ func update_animation_peramiters():
 		animation_tree["parameters/Walking_BlendSpace2D/blend_position"] = walking_direction
 		
 	
+
+
+func _on_close_button_toggled(toggled_on):
+	pass # Replace with function body.

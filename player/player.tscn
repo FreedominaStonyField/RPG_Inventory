@@ -1,8 +1,9 @@
-[gd_scene load_steps=30 format=3 uid="uid://cedc7r2smh7l2"]
+[gd_scene load_steps=31 format=3 uid="uid://cedc7r2smh7l2"]
 
 [ext_resource type="Script" path="res://player/Player.gd" id="1_pia3j"]
 [ext_resource type="Texture2D" uid="uid://du84ahddndkjd" path="res://bace_dummy.png" id="2_7vq3v"]
 [ext_resource type="Script" path="res://pause_menu/pausemenu.gd" id="3_jekwk"]
+[ext_resource type="ButtonGroup" uid="uid://sim2sxwk8xoq" path="res://pause_menu.tres" id="4_7msxw"]
 [ext_resource type="Script" path="res://player/testing_detection.gd" id="4_mw0tn"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kku5h"]
@@ -530,14 +531,20 @@ layout_mode = 2
 
 [node name="InventoryButton" type="Button" parent="UI/PauseMenu/MarginContainer/VBoxContainer"]
 layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("4_7msxw")
 text = "Bag"
 
 [node name="SaveButton" type="Button" parent="UI/PauseMenu/MarginContainer/VBoxContainer"]
 layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("4_7msxw")
 text = "Save"
 
 [node name="CloseButton" type="Button" parent="UI/PauseMenu/MarginContainer/VBoxContainer"]
 layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("4_7msxw")
 text = "Close"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="UI"]
@@ -548,4 +555,4 @@ offset_right = -911.0
 offset_bottom = 328.0
 script = ExtResource("4_mw0tn")
 
-[connection signal="pressed" from="UI/PauseMenu/MarginContainer/VBoxContainer/CloseButton" to="UI/PauseMenu" method="_on_close_button_pressed"]
+[connection signal="toggled" from="UI/PauseMenu/MarginContainer/VBoxContainer/CloseButton" to="UI/PauseMenu" method="_on_close_button_toggled"]
