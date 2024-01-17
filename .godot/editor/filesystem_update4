@@ -10,3 +10,4 @@ res://player/random_item.tscn
 res://player/InventoryPanel.gd
 res://interaction_area/Interaction_Manager.gd
 res://player_spawner/PlayerSpawner.gd
+res://player/Player.gd

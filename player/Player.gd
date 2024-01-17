@@ -10,6 +10,8 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var direction:Vector3 = Vector3.ZERO
 @onready var animation_tree :AnimationTree = $Visuals/AnimationTree
 
+func _ready():
+	InteractionManager.player = self
 
 @warning_ignore("unused_parameter")
 func _process(delta):
