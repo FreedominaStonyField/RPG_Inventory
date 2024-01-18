@@ -63,16 +63,21 @@ shadow_enabled = true
 [node name="Floor" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.2664, 0, 0)
 use_collision = true
+collision_layer = 2
+collision_mask = 7
 size = Vector3(40.5327, 1, 40)
 
 [node name="Walls" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.76636, 0, 0)
 use_collision = true
+collision_layer = 2
+collision_mask = 5
 size = Vector3(41.5327, 7, 42)
 metadata/_edit_group_ = true
 
 [node name="Cutout" type="CSGBox3D" parent="Walls"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.130981, 1, 0)
+layers = 2
 operation = 2
 use_collision = true
 size = Vector3(39.0403, 6, 40)
@@ -134,15 +139,19 @@ shape = SubResource("ConcavePolygonShape3D_758u1")
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 
 [node name="Random_Item" parent="." instance=ExtResource("5_j8tdl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.97569, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.2799, 1.97569, 0)
+collision_mask = 7
 
 [node name="Random_Item2" parent="." instance=ExtResource("5_j8tdl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.70891, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.2799, 3.70891, 0)
+collision_mask = 7
 
 [node name="Random_Item3" parent="." instance=ExtResource("5_j8tdl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.10372, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.2799, 5.10372, 0)
+collision_mask = 7
 
 [node name="Random_Item4" parent="." instance=ExtResource("5_j8tdl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.1977, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.2799, 6.1977, 0)
+collision_mask = 7
 
 [editable path="blockbench_export"]

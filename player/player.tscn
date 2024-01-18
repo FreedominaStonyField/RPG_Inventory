@@ -456,6 +456,7 @@ states/Walking_BlendSpace2D/position = Vector2(494, 34)
 transitions = ["Start", "Idle_BlendSpace2D", SubResource("AnimationNodeStateMachineTransition_0m3ay"), "Idle_BlendSpace2D", "Walking_BlendSpace2D", SubResource("AnimationNodeStateMachineTransition_q8u1r"), "Walking_BlendSpace2D", "Idle_BlendSpace2D", SubResource("AnimationNodeStateMachineTransition_iv358")]
 
 [node name="Player" type="CharacterBody3D"]
+collision_mask = 3
 script = ExtResource("1_pia3j")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

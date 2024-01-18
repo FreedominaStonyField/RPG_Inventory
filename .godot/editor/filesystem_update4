@@ -11,3 +11,4 @@ res://player/InventoryPanel.gd
 res://interaction_area/Interaction_Manager.gd
 res://player_spawner/PlayerSpawner.gd
 res://player/Player.gd
+res://starter_town/rival_house/rival_house.gd
