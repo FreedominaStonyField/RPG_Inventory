@@ -11,24 +11,20 @@ config_version=5
 [application]
 
 config/name="Rpg Inventory"
-run/main_scene="res://level.tscn"
+run/main_scene="res://levels/starter_town/level.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
+boot_splash/bg_color=Color(0.0196078, 0.0196078, 0.0196078, 1)
 config/icon="res://icon.svg"
 
 [autoload]
 
-ItemDatabase="*res://ItemDatabase/item_database.gd"
+ItemDatabase="*res://auto_loads/ItemDatabase/item_database.gd"
 Dialogic="*res://addons/dialogic/Other/DialogicGameHandler.gd"
-InteractionManager="*res://interaction_area/Interaction_Manager.tscn"
+InteractionManager="*res://auto_loads/InteractionAreaManager/Interaction_Manager.tscn"
 
 [dialogic]
 
-directories/dch_directory={
-"Player": "res://player/Player.dch",
-"character": "res://character.dch",
-"professor": "res://professor.dch",
-"shopkeeper": "res://shopkeeper.dch"
-}
+directories/dch_directory={}
 directories/dtl_directory={
 "welcome_game_start": "res://welcome_game_start.dtl"
 }

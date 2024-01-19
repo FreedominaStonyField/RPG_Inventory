@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dgil1atc6avid"]
-
-[ext_resource type="Script" path="res://player_spawner/PlayerSpawner.gd" id="1_td5mt"]
-
-[node name="PlayerSpawner" type="Marker3D"]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -12.7716, 2.20392, 0.0451188)
-gizmo_extents = 1.0
-script = ExtResource("1_td5mt")

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="game_item" load_steps=2 format=3 uid="uid://b0cyc8gujgam5"]
+
+[ext_resource type="Script" path="res://auto_loads/ItemDatabase/game_item_class.gd" id="1_ytejj"]
+
+[resource]
+script = ExtResource("1_ytejj")
+stackable = true
+max_stack_size = 999
+item_name = &"my key"
+item_catagory = "Indispensable"
