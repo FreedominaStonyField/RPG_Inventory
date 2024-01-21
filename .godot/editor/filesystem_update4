@@ -1,14 +1,8 @@
-res://interaction_area/Interaction_Manager.tscn
-res://Style.tres
-res://VN_style.tres
-res://interaction_area/interaction_area.tscn
-res://starter_town/rival_house/rival_house.tscn
-res://player/random_item.tscn
-res://level.tscn
-res://player/player.tscn
 res://levels/starter_town/level.tscn
 res://common/interaction_area/interaction_area.tscn
 res://auto_loads/InteractionAreaManager/Interaction_Manager.tscn
 res://levels/starter_town/rival_house/rival_house.tscn
 res://common/ground_item_template/random_item.tscn
-res://auto_loads/ItemDatabase/item_database.gd
+res://player/player.tscn
+res://start_menu/start_menu.tscn
+res://start_menu/start_menu.gd
