@@ -20,7 +20,7 @@ config/icon="res://icon.svg"
 
 ItemDatabase="*res://auto_loads/ItemDatabase/item_database.gd"
 Dialogic="*res://addons/dialogic/Other/DialogicGameHandler.gd"
-InteractionManager="*res://auto_loads/InteractionAreaManager/Interaction_Manager.tscn"
+InteractionManager="res://auto_loads/InteractionAreaManager/Interaction_Manager.tscn"
 
 [dialogic]
 

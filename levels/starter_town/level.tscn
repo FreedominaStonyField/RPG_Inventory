@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://c2vpknecl4bdb"]
+[gd_scene load_steps=47 format=3 uid="uid://c2vpknecl4bdb"]
 
 [ext_resource type="PackedScene" uid="uid://dgil1atc6avid" path="res://player/player_spawner/player_spawner.tscn" id="1_wtmh3"]
 [ext_resource type="Script" path="res://player/Player.gd" id="2_5mbxf"]
@@ -7,7 +7,6 @@
 [ext_resource type="Script" path="res://player/InventoryPanel.gd" id="5_njpsv"]
 [ext_resource type="PackedScene" uid="uid://c5k72wyps11wh" path="res://levels/starter_town/rival_house/rival_house.tscn" id="6_jcg76"]
 [ext_resource type="PackedScene" uid="uid://dtkr45pl0g6ir" path="res://levels/starter_town/player_house/playerhouse.gltf" id="7_ntm3x"]
-[ext_resource type="PackedScene" uid="uid://dnjq08awuafjg" path="res://common/ground_item_template/random_item.tscn" id="8_rce24"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kku5h"]
 radius = 0.404439
@@ -607,21 +606,5 @@ shape = SubResource("ConcavePolygonShape3D_eh2tv")
 shape = SubResource("ConcavePolygonShape3D_758u1")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
-
-[node name="Random_Item" parent="." instance=ExtResource("8_rce24")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.2799, 1.97569, 0)
-collision_mask = 7
-
-[node name="Random_Item2" parent="." instance=ExtResource("8_rce24")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.2799, 3.70891, 0)
-collision_mask = 7
-
-[node name="Random_Item3" parent="." instance=ExtResource("8_rce24")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.2799, 5.10372, 0)
-collision_mask = 7
-
-[node name="Random_Item4" parent="." instance=ExtResource("8_rce24")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.2799, 6.1977, 0)
-collision_mask = 7
 
 [editable path="blockbench_export"]

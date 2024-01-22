@@ -1,10 +1,8 @@
-res://levels/starter_town/level.tscn
-res://common/interaction_area/interaction_area.tscn
-res://auto_loads/InteractionAreaManager/Interaction_Manager.tscn
-res://levels/starter_town/rival_house/rival_house.tscn
 res://common/ground_item_template/random_item.tscn
-res://player/player.tscn
-res://start_menu/start_menu.tscn
-res://start_menu/start_menu.gd
 res://player/Player.gd
-res://player/InventoryPanel.gd
+res://common/ground_item_template/random_item.gd
+res://levels/starter_town/level.tscn
+res://start_menu/start_menu.tscn
+res://player/player.tscn
+res://auto_loads/InteractionAreaManager/Interaction_Manager.gd
+res://levels/starter_town/rival_house/rival_house.tscn

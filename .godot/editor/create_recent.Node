@@ -1,8 +1,9 @@
+CollisionShape3D
+Area3D
 Button
 VBoxContainer
 ColorRect
 Sprite3D
-CollisionShape3D
 RigidBody3D
 StaticBody3D
 MeshInstance3D
@@ -10,5 +11,4 @@ CSGBox3D
 MarginContainer
 PanelContainer
 Label
-Area3D
 Control

@@ -1,6 +1,6 @@
 extends RigidBody3D
 
-
+@export var ItemName : StringName
 
 @onready var interaction_area = $InteractionArea
 
@@ -12,7 +12,7 @@ func _ready():
 
 
 func _on_interact():
-	InteractionManager.player.inventory.add_item("Hypno Watch", 1)
+	InteractionManager.player.inventory.add_item(ItemName, 1)
 	queue_free()
 	pass
 
