@@ -12,7 +12,7 @@ radius = 0.25
 
 [node name="Random_Item" type="RigidBody3D"]
 collision_layer = 4
-collision_mask = 5
+collision_mask = 4
 script = ExtResource("1_t2rdi")
 
 [node name="InteractionArea" parent="." instance=ExtResource("1_x5c0y")]

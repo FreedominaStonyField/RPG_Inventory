@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-var inventory : Inventory = Inventory.new()
+@export var inventory : Inventory = Inventory.new()
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5

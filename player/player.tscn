@@ -1,9 +1,14 @@
-[gd_scene load_steps=31 format=3 uid="uid://dtx41cg8iba1d"]
+[gd_scene load_steps=33 format=3 uid="uid://dtx41cg8iba1d"]
 
 [ext_resource type="Script" path="res://player/Player.gd" id="1_pia3j"]
 [ext_resource type="Texture2D" uid="uid://du84ahddndkjd" path="res://common/bace_dummy.png" id="2_0acld"]
+[ext_resource type="Script" path="res://common/Inventory_system/Inventory_Resource.gd" id="2_jxb75"]
 [ext_resource type="Script" path="res://pause_menu/pausemenu.gd" id="3_jekwk"]
 [ext_resource type="Script" path="res://player/InventoryPanel.gd" id="5_ftu2u"]
+
+[sub_resource type="Resource" id="Resource_1dxod"]
+script = ExtResource("2_jxb75")
+_items = null
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kku5h"]
 radius = 0.404439
@@ -459,6 +464,7 @@ transitions = ["Start", "Idle_BlendSpace2D", SubResource("AnimationNodeStateMach
 [node name="Player" type="CharacterBody3D"]
 collision_mask = 3
 script = ExtResource("1_pia3j")
+inventory = SubResource("Resource_1dxod")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0631936, 0)
@@ -492,6 +498,7 @@ parameters/Walking_BlendSpace2D/blend_position = Vector2(-0.00198019, 0.732087)
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-1, 6.18172e-08, -6.18172e-08, 0, 0.707107, 0.707107, 8.74228e-08, 0.707107, -0.707107, 0, 20, -20)
+projection = 1
 fov = 10.0
 size = 4.0
 

@@ -6,3 +6,5 @@ res://common/ground_item_template/random_item.tscn
 res://player/player.tscn
 res://start_menu/start_menu.tscn
 res://start_menu/start_menu.gd
+res://player/Player.gd
+res://player/InventoryPanel.gd
