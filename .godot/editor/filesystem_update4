@@ -8,3 +8,4 @@ res://auto_loads/InteractionAreaManager/Interaction_Manager.gd
 res://levels/starter_town/rival_house/rival_house.tscn
 res://common/interaction_area/interaction_area.gd
 res://levels/starter_town/rival_house/rival_house.gd
+res://auto_loads/ItemDatabase/Items/Dollars.tres
