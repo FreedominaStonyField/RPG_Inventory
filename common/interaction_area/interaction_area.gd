@@ -8,10 +8,10 @@ var interact: Callable = func():
 
 
 func _on_body_entered(body):
-	InteractionManager.register_area(self)
+	#InteractionManager.register_area(self)
 	pass # Replace with function body.
 
 
 func _on_body_exited(body):
-	InteractionManager.unregister_area(self)
+	#InteractionManager.unregister_area(self)
 	pass # Replace with function body.

@@ -11,8 +11,8 @@ var direction:Vector3 = Vector3.ZERO
 @onready var animation_tree :AnimationTree = $Visuals/AnimationTree
 
 func _ready():
-	InteractionManager.player = self
-
+	#InteractionManager.player = self
+	pass 
 @warning_ignore("unused_parameter")
 func _process(delta):
 	update_animation_peramiters()

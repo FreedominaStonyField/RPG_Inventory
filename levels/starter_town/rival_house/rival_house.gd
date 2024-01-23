@@ -6,8 +6,8 @@ extends Node3D
 
 
 func _ready():
-	interaction_area.interact = Callable(self,"_on_interact")
-
+	#interaction_area.interact = Callable(self,"_on_interact")
+	pass
 
 
 func _on_interact():
