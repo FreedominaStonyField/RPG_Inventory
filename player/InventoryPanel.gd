@@ -27,7 +27,7 @@ func _on_inventory_button_toggled(toggled_on):
 	if toggled_on == true:
 		visible = true
 		if bag_slots.get_children().size() > 0:
-			bag_slots.get_child(0).grab_focus()
+			bag_slots.get_child(0).grab_focus() 
 		#for i in $MarginContainer/VBoxContainer.get_children():
 			#i.queue_free()
 		#for i in InteractionManager.player.inventory._get_items():

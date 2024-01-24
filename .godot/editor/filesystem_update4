@@ -8,3 +8,4 @@ res://common/interaction_area.2/InteractionArea.gd
 res://auto_loads/ItemDatabase/Items/Battle_Gear.tres
 res://pause_menu/pausemenu.gd
 res://player/InventoryPanel.gd
+res://common/mailbox/MailBox.tscn

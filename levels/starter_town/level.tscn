@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://c2vpknecl4bdb"]
+[gd_scene load_steps=49 format=3 uid="uid://c2vpknecl4bdb"]
 
 [ext_resource type="PackedScene" uid="uid://ctbekatuviq0q" path="res://common/StaticTree/static_tree.tscn" id="1_vsg01"]
 [ext_resource type="PackedScene" uid="uid://dgil1atc6avid" path="res://player/player_spawner/player_spawner.tscn" id="1_wtmh3"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://player/InventoryPanel.gd" id="5_njpsv"]
 [ext_resource type="PackedScene" uid="uid://c5k72wyps11wh" path="res://levels/starter_town/rival_house/rival_house.tscn" id="6_jcg76"]
 [ext_resource type="PackedScene" uid="uid://dtkr45pl0g6ir" path="res://levels/starter_town/player_house/playerhouse.gltf" id="7_ntm3x"]
+[ext_resource type="PackedScene" uid="uid://dap0oegruvr8x" path="res://common/mailbox/MailBox.tscn" id="9_3txms"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kku5h"]
 radius = 0.404439
@@ -635,5 +636,8 @@ shape = SubResource("ConcavePolygonShape3D_eh2tv")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="blockbench_export/Node/basichouse/house/stairsSide/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_758u1")
+
+[node name="StaticTree11" parent="." instance=ExtResource("9_3txms")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.86522, 0, -3.56696)
 
 [editable path="blockbench_export"]
