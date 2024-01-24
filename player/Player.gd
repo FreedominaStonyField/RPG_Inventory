@@ -12,6 +12,7 @@ var direction:Vector3 = Vector3.ZERO
 
 func _ready():
 	#InteractionManager.player = self
+	
 	pass  
 @warning_ignore("unused_parameter")
 func _process(delta):

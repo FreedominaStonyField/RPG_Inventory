@@ -1,11 +1,11 @@
-CollisionShape3D
 Area3D
+Sprite3D
+CollisionShape3D
+StaticBody3D
 Button
 VBoxContainer
 ColorRect
-Sprite3D
 RigidBody3D
-StaticBody3D
 MeshInstance3D
 CSGBox3D
 MarginContainer

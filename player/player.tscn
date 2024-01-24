@@ -462,7 +462,7 @@ transitions = ["Start", "Idle_BlendSpace2D", SubResource("AnimationNodeStateMach
 [sub_resource type="ButtonGroup" id="ButtonGroup_if4xm"]
 
 [node name="Player" type="CharacterBody3D"]
-collision_mask = 3
+collision_mask = 7
 script = ExtResource("1_pia3j")
 inventory = SubResource("Resource_1dxod")
 
@@ -479,8 +479,9 @@ libraries = {
 
 [node name="Sprite3D" type="Sprite3D" parent="Visuals"]
 pixel_size = 0.05
+billboard = 2
 shaded = true
-texture_filter = 2
+texture_filter = 0
 texture = ExtResource("2_0acld")
 hframes = 7
 vframes = 2

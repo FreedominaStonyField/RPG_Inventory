@@ -1,11 +1,8 @@
-res://common/ground_item_template/random_item.tscn
-res://player/Player.gd
-res://common/ground_item_template/random_item.gd
-res://levels/starter_town/level.tscn
 res://start_menu/start_menu.tscn
+res://player/Player.gd
 res://player/player.tscn
-res://auto_loads/InteractionAreaManager/Interaction_Manager.gd
+res://levels/starter_town/level.tscn
 res://levels/starter_town/rival_house/rival_house.tscn
-res://common/interaction_area/interaction_area.gd
-res://levels/starter_town/rival_house/rival_house.gd
-res://auto_loads/ItemDatabase/Items/Dollars.tres
+res://common/StaticTree/static_tree.tscn
+res://common/interaction_area.2/InteractionArea.gd
+res://auto_loads/ItemDatabase/Items/Battle_Gear.tres
