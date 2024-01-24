@@ -11,6 +11,7 @@ func _input(event):
 func toggle_menu():
 		get_tree().paused = !get_tree().paused
 		visible = !visible
+		$MarginContainer/VBoxContainer.get_child(0).grab_focus()
 		for i in $MarginContainer/VBoxContainer.get_children():
 			i.button_pressed = false
 
@@ -18,12 +19,7 @@ func toggle_menu():
 
 
 func _on_close_button_toggled(toggled_on):
-	
-	#get_tree().paused = !get_tree().paused
-	#visible = !visible
 	toggle_menu()
-	
-	pass # Replace with function body.
 
 
 func _on_close_button_pressed():
