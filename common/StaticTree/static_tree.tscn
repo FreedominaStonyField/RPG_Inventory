@@ -3,12 +3,12 @@
 [ext_resource type="Texture2D" uid="uid://scta76088eal" path="res://common/sprite_sheet_temp_test_del_later.png" id="1_6sem5"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kamhy"]
-size = Vector3(1.095, 2.12, 0.437)
+size = Vector3(1.095, 2.12, 0.911892)
 
 [node name="StaticTree" type="StaticBody3D"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0120642, 0.859563, 0.0882624)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0120642, 0.859563, -0.0309723)
 shape = SubResource("BoxShape3D_kamhy")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]

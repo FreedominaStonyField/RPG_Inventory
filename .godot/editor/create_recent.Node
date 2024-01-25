@@ -1,3 +1,5 @@
+AnimationPlayer
+ColorRect
 Node3D
 Node
 Area3D
@@ -6,7 +8,6 @@ CollisionShape3D
 StaticBody3D
 Button
 VBoxContainer
-ColorRect
 RigidBody3D
 MeshInstance3D
 CSGBox3D

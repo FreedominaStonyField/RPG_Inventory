@@ -9,3 +9,5 @@ res://common/StaticTree/money_tree.tscn
 res://common/StaticTree/static_tree.tscn
 res://main.tscn
 res://player/player_spawner/PlayerSpawner.gd
+res://level_changer.gd
+res://level_changer.tscn
