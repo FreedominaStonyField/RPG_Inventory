@@ -3,20 +3,20 @@
 [ext_resource type="Texture2D" uid="uid://scta76088eal" path="res://common/sprite_sheet_temp_test_del_later.png" id="1_f7j3u"]
 [ext_resource type="Script" path="res://common/interaction_area.2/InteractionArea.gd" id="2_siop5"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_5co6f"]
-size = Vector3(0.985, 1.195, 0.95)
+[sub_resource type="BoxShape3D" id="BoxShape3D_jhqyg"]
+size = Vector3(0.392246, 0.801008, 0.267285)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fx5gn"]
-size = Vector3(1.2424, 1.195, 1.24263)
+size = Vector3(1.82238, 1.30856, 1.60715)
 
 [node name="MailBox" type="StaticBody3D"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0192261, 0.408569, -0.120866)
-shape = SubResource("BoxShape3D_5co6f")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0385571, 0.211573, 0.00301066)
+shape = SubResource("BoxShape3D_jhqyg")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0106887, 0.912048, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0106887, 0.221166, 0)
 pixel_size = 0.05
 billboard = 1
 shaded = true
@@ -29,7 +29,7 @@ region_rect = Rect2(80, 15, 16, 17)
 collision_layer = 4
 script = ExtResource("2_siop5")
 Pickup_item = &"Hypno Watch"
-pickup_ammount = 6
+pickup_ammount = 4
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionArea"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0309314, 0.408569, -0.127434)

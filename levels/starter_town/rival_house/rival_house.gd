@@ -1,7 +1,7 @@
 extends Node3D
 
 
-@onready var interaction_area = $InteractionArea
+#@onready var interaction_area = $InteractionArea
 
 
 

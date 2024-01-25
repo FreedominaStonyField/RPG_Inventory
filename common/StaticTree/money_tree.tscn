@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://dwrxsdv4p6yol"]
+
+[ext_resource type="Texture2D" uid="uid://scta76088eal" path="res://common/sprite_sheet_temp_test_del_later.png" id="1_3yovf"]
+[ext_resource type="Script" path="res://common/interaction_area.2/InteractionArea.gd" id="2_fasvn"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k8d3u"]
+size = Vector3(1.30815, 2.19659, 0.676624)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fx5gn"]
+size = Vector3(1.82238, 1.30856, 1.60715)
+
+[node name="MoneyTree" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00882995, 0.909028, 0.0171908)
+shape = SubResource("BoxShape3D_k8d3u")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0106887, 0.912048, 0)
+pixel_size = 0.05
+billboard = 1
+shaded = true
+texture_filter = 0
+texture = ExtResource("1_3yovf")
+region_enabled = true
+region_rect = Rect2(63, 128, 33, 47)
+
+[node name="InteractionArea" type="Area3D" parent="."]
+collision_layer = 4
+script = ExtResource("2_fasvn")
+Pickup_item = &"$"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0894607, 0.465349, 0.0548296)
+shape = SubResource("BoxShape3D_fx5gn")
+
+[connection signal="body_entered" from="InteractionArea" to="InteractionArea" method="_on_body_entered"]
+[connection signal="body_exited" from="InteractionArea" to="InteractionArea" method="_on_body_exited"]

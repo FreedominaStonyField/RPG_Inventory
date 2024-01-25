@@ -9,3 +9,5 @@ res://auto_loads/ItemDatabase/Items/Battle_Gear.tres
 res://pause_menu/pausemenu.gd
 res://player/InventoryPanel.gd
 res://common/mailbox/MailBox.tscn
+res://common/StaticTree/money_tree.tscn
+res://levels/starter_town/rival_house/rival_house.gd
