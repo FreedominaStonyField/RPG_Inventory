@@ -1,13 +1,11 @@
 res://start_menu/start_menu.tscn
 res://player/Player.gd
+res://start_menu/start_menu.gd
 res://player/player.tscn
 res://levels/starter_town/level.tscn
 res://levels/starter_town/rival_house/rival_house.tscn
-res://common/StaticTree/static_tree.tscn
-res://common/interaction_area.2/InteractionArea.gd
-res://auto_loads/ItemDatabase/Items/Battle_Gear.tres
-res://pause_menu/pausemenu.gd
-res://player/InventoryPanel.gd
 res://common/mailbox/MailBox.tscn
 res://common/StaticTree/money_tree.tscn
-res://levels/starter_town/rival_house/rival_house.gd
+res://common/StaticTree/static_tree.tscn
+res://main.tscn
+res://player/player_spawner/PlayerSpawner.gd

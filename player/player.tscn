@@ -408,13 +408,13 @@ animation = &"idle right"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_mdvvj"]
 blend_point_0/node = SubResource("AnimationNodeAnimation_l2fj3")
-blend_point_0/pos = Vector2(-1, 0)
+blend_point_0/pos = Vector2(1, 0)
 blend_point_1/node = SubResource("AnimationNodeAnimation_usi1k")
 blend_point_1/pos = Vector2(0, -1)
 blend_point_2/node = SubResource("AnimationNodeAnimation_5icf7")
 blend_point_2/pos = Vector2(0, 1)
 blend_point_3/node = SubResource("AnimationNodeAnimation_bolgh")
-blend_point_3/pos = Vector2(1, 0)
+blend_point_3/pos = Vector2(-1, 0)
 blend_mode = 1
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_o0dy4"]
@@ -431,9 +431,9 @@ animation = &"walk_down"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_b05r4"]
 blend_point_0/node = SubResource("AnimationNodeAnimation_o0dy4")
-blend_point_0/pos = Vector2(-1, 0)
+blend_point_0/pos = Vector2(1, 0)
 blend_point_1/node = SubResource("AnimationNodeAnimation_3hho3")
-blend_point_1/pos = Vector2(1, 0)
+blend_point_1/pos = Vector2(-1, 0)
 blend_point_2/node = SubResource("AnimationNodeAnimation_d2pwg")
 blend_point_2/pos = Vector2(0, -1)
 blend_point_3/node = SubResource("AnimationNodeAnimation_65dgp")
@@ -498,7 +498,7 @@ parameters/Idle_BlendSpace2D/blend_position = Vector2(-0.0947955, -0.460317)
 parameters/Walking_BlendSpace2D/blend_position = Vector2(-0.00198019, 0.732087)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-1, 6.18172e-08, -6.18172e-08, 0, 0.707107, 0.707107, 8.74228e-08, 0.707107, -0.707107, 0, 20, -20)
+transform = Transform3D(1, 0, 0, 0, 0.766044, 0.642788, 0, -0.642788, 0.766044, 0, 9, 9)
 projection = 1
 fov = 10.0
 size = 4.0

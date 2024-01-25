@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cy38eshl3cmm5"]
+
+[ext_resource type="PackedScene" uid="uid://cbpb7k4y2h0f2" path="res://start_menu/start_menu.tscn" id="1_ehsyy"]
+[ext_resource type="PackedScene" uid="uid://dtx41cg8iba1d" path="res://player/player.tscn" id="2_3i0m7"]
+
+[node name="Main" type="Node"]
+
+[node name="StartMenu" parent="." instance=ExtResource("1_ehsyy")]
+player = ExtResource("2_3i0m7")
+
+[node name="GameWorld" type="Node" parent="."]
+
+[node name="Level" type="Node3D" parent="GameWorld"]
+
+[node name="Player" type="Node3D" parent="GameWorld"]
+
+[editable path="StartMenu"]

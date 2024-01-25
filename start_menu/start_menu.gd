@@ -1,13 +1,20 @@
 extends Control
 
 @export var new_game_scene : PackedScene 
+@export var player : PackedScene
 
 func _ready():
 	$ColorRect/VBoxContainer/NewGameButton.grab_focus()
 
 func _on_new_game_button_pressed():
+	$"../GameWorld/Level".add_child(new_game_scene.instantiate())
+	var player_instance = player.instantiate()
+	$"../GameWorld/Player".add_child(player_instance)
+	
+	queue_free()
 	# Start Game
-	get_tree().change_scene_to_packed(new_game_scene)
+	#$".".add_child(new_game_scene.instantiate())
+	#queue_free()
 	pass # Replace with function body.
 
 

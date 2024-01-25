@@ -5,7 +5,7 @@ extends Marker3D
 func _ready():
 	#Dialogic.start("welcome_game_start")
 	var player = player_scene.instantiate()
-	player.add_to_group("player")
-	add_child(player)
+	#player.add_to_group("player")
+	#add_child(player)
 	
 	#hide()
